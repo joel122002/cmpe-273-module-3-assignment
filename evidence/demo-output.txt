@@ -1,0 +1,6 @@
+REST success: HTTP 201; {"accepted": true, "available": true, "message": "book: 2 available"}
+REST delayed inventory: HTTP 504; {"error": "inventory request timed out after 1s"}
+REST Order Service: still running; subsequent request returned HTTP 201
+gRPC success: accepted=True message=book: 2 available
+gRPC delayed inventory: DEADLINE_EXCEEDED: inventory check exceeded the order deadline
+gRPC Order Service: still running; subsequent call returned accepted=True message=book: 2 available
